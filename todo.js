@@ -32,12 +32,12 @@ function paintToDo(text){
     const delBtn = document.createElement("button"); // create button
     const span = document.createElement("span"); // create span
     const newId = toDos.length + 1;
-    delBtn.innerText = "😱";
+    delBtn.innerHTML = "❎";
     delBtn.addEventListener("click", deleteToDo);
     span.innerText = text;
+    li.appendChild(delBtn); // button을 li 안에 넣어 
     li.appendChild(span); // span을 li 안에 넣고
     li.id = newId;
-    li.appendChild(delBtn); // button을 li 안에 넣어 
     toDoList.appendChild(li);
     const toDoObj = {
         text: text,
